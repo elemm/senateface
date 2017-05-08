@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head></head>
+    <body>
+        <h1>House Legislators</h1>
+        <table>
+          <tr>
+              <th>First Name </th>
+              <th>Last Name </th>
+              <th>ID </th>
+              <th>House Vote on Healthcare Bill </th>
+         {% for obj in object_list %}
+         <tr>
+            <td>{{ obj.firstname }}</td>
+            <td>{{ obj.lastname }}</td>
+            <td>{{ obj.bioguide_id }}</td>
+            <td>{{ obj."house vote on healthcare"}}</td>
+        </tr>
+        { % endfor %}
+      </table>
+    </body>
+</html>
