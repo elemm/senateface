@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='mystyles.css')}}">
+
+    </head>
+
+
+    <body>
+
+      <section class="container">
+        <h1>Who voted to repeal Obamacare?</h1>
+        <h2>Those who voted to repeal are marked with a black border</h2>
+
+          {% for obj in congress %}
+            <div class="mugshot">
+              <a href="./{{ obj["bioguide_id"]}}"><img src="https://theunitedstates.io/images/congress/225x275/{{ obj["bioguide_id"] }}.jpg" alt="{{obj['firstname']}} {{obj['lastname']}}">
+            </div>
+         {% endfor %}
+      </section>
+
+
+    </body>
+</html>

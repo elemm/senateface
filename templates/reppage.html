@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='mystyles.css')}}">
+    </head>
+
+    <body>
+      <section class="container">
+        {% for obj in congress %}
+        {% if obj['bioguide_id']== rep_id %}
+          <h1>{{obj['firstname']}} {{obj['lastname']}}</h1>
+              <a href="/{{ obj["bioguide_id"] }}"><img src="https://theunitedstates.io/images/congress/450x550/{{ obj["bioguide_id"] }}.jpg" alt="{{obj['firstname']}} {{obj['lastname']}}">
+            <h3>This representative voted <strong>"{{obj['house vote on healthcare']}}" </strong> on the Obamacare repeal bill. </h3>
+            {% endif %}
+         {% endfor %}
+      </section>
+
+    </body>
+</html>

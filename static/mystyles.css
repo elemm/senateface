@@ -1,0 +1,12 @@
+.mugshot img{
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.mugshot{
+  float: left;
+  max-width: 90px;
+  min-width: 100%;
+  min-height: 100%;
+}
